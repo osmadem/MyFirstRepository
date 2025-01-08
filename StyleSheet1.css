@@ -14,13 +14,7 @@ h1 {
 
 .container {
     margin: 20px auto;
-    width: 90%; /* Asegura que el contenedor se ajuste bien */
-    max-width: 400px;  /* Limita el tamaño máximo en pantallas grandes */
-    background: #222;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border: 1px solid black; /* Borde negro alrededor */
+    width: 260px;
 }
 
 input#num1 {
@@ -30,11 +24,11 @@ input#num1 {
     text-align: right;
     padding: 10px;
     margin-bottom: 15px;
-    border: none;
+    border: 1px solid #000; /* Borde negro para la pantalla */
     border-radius: 5px;
     background-color: #fff;
     color: #333;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);  /* Sombra interna */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra interna */
 }
 
 /* Estilo de los botones */
@@ -75,7 +69,7 @@ button.boton-delete {
 @media (max-width: 480px) {
     /* Ajuste de los botones para que no sean demasiado grandes */
     div button {
-        width: 45px;  /* Más pequeño en pantallas pequeñas */
+        width: 45px; /* Más pequeño en pantallas pequeñas */
         height: 45px;
         font-size: 14px;
     }
@@ -84,15 +78,15 @@ button.boton-delete {
     input#num1 {
         font-size: 20px;
         height: 50px;
+        border: 1px solid #000; /* Aseguramos el borde negro también en móvil */
     }
 
-    /* Ajuste del contenedor */
+    /* Ajuste de la disposición de los botones */
     .container {
-        width: 100%;  /* Se ajusta completamente al ancho del dispositivo */
-        padding: 10px;  /* Menos padding en pantallas pequeñas */
+        width: 90%; /* Se adapta mejor al tamaño del dispositivo */
     }
 
     h1 {
-        font-size: 20px;  /* Título más pequeño en dispositivos pequeños */
+        font-size: 20px; /* Se ajusta el tamaño del título */
     }
 }
