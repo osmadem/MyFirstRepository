@@ -1,23 +1,5 @@
 ﻿
-h1 {
-    color: red;
-    font-family: Arial;
-   }
-
-input {
-    background-color: aqua;
-  
-   
-}
-
-placeholder {
-    color:blue;
-}
-
-input::placeholder {
-    color: black; 
-}
-
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -38,68 +20,6 @@ h1 {
 
 input#num1 {
     width: 100%;
-    height: 50px;
-    font-size: 20px;
-    text-align: right;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-div button {
-    width: 60px;
-    height: 60px;
-    margin: 5px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    background-color: dodgerblue;
-    color: black;
-    cursor: pointer;
-}
-
-    div button:hover {
-        background-color: red;
-    }
-
-    div button:active {
-        background-color: peru;
-    }
-
-
-button[onclick="borrar()"] {
-    background-color: green;
-}
-
-    button[onclick="borrar()"]:hover {
-        background-color: red;
-    }
-
-
-button[onclick="resultadoFinal()"] {
-    background-color: yellow;
-    color: white;
-}
-
-
-button.boton-delete {
-    background-color: red;
-}
-
-.container {
-    margin: 20px auto;
-    width: 90%;
-    max-width: 300px;
-    background: #222;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-
-input#num1 {
-    width: 100%;
     height: 60px;
     font-size: 24px;
     text-align: right;
@@ -112,20 +32,62 @@ input#num1 {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilo de los botones */
+div button {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    color: black;
+    cursor: pointer;
+}
 
+div button:hover {
+    background-color: red;
+}
 
+div button:active {
+    background-color: peru;
+}
+
+button[onclick="borrar()"] {
+    background-color: green;
+}
+
+button[onclick="resultadoFinal()"] {
+    background-color: yellow;
+    color: white;
+}
+
+button.boton-delete {
+    background-color: red;
+}
+
+/* Ajustes para dispositivos móviles */
 @media (max-width: 480px) {
+    /* Ajuste para que los botones sean más pequeños en pantallas móviles */
     div button {
-        width: 50px;
+        width: 45px; /* Ajustamos el tamaño de los botones */
+        height: 45px;
+        font-size: 14px;
+    }
+
+    /* Ajuste de la pantalla de entrada para que sea más visible */
+    input#num1 {
+        font-size: 20px;
         height: 50px;
-        font-size: 16px;
+    }
+
+    /* Ajustamos el contenedor */
+    .container {
+        width: 90%;
     }
 
     h1 {
-        font-size: 24px;
-    }
-
-    input#num1 {
         font-size: 20px;
     }
 }
+
