@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -13,18 +12,22 @@ h1 {
 }
 
 .container {
-    margin: 40px auto;
-    width: 280px;  
-    max-width: 100%; 
+    margin: 20px auto;
+    max-width: 100%;
+    width: 320px; /* Ancho base para pantallas grandes */
     background: #222;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido */
 }
 
 .input-container {
-    margin-bottom: 5px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 input#num1 {
@@ -42,21 +45,17 @@ input#num1 {
 
 .buttons {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.button-row {
-    display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;  /* Asegura que los botones se ajusten a nuevas filas si es necesario */
+    gap: 10px;
+    justify-content: center; /* Alinea los botones en el centro */
 }
 
 div button {
-    width: 67px;
-    height: 60px;
+    width: 70px;  /* Ancho fijo para los botones */
+    height: 70px;
     font-size: 18px;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: dodgerblue;
     color: black;
     cursor: pointer;
@@ -83,7 +82,7 @@ button.boton-delete {
     background-color: red;
 }
 
-
+/* Responsive para pantallas pequeñas */
 @media (max-width: 480px) {
     .container {
         width: 90%;
@@ -96,8 +95,8 @@ button.boton-delete {
     }
 
     div button {
-        width: 50px;
-        height: 50px;
+        width: 60px;  /* Ajusta el tamaño de los botones */
+        height: 60px;
         font-size: 16px;
     }
 
@@ -107,19 +106,7 @@ button.boton-delete {
 
     .buttons {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 3px;
+        grid-template-columns: repeat(4, 1fr); /* Disposición de 4 columnas */
+        gap: 5px;
     }
-}
-
-
-.button-row:last-child {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.button-row:last-child button {
-    width: 48%;
-    font-size: 20px;
 }
