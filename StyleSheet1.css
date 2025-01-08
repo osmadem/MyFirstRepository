@@ -1,4 +1,4 @@
-/* Estilos generales (para escritorio y dispositivos grandes) */
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -24,11 +24,11 @@ input#num1 {
     text-align: right;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc; /* Añadimos el borde visible */
+    border: none;
     border-radius: 5px;
     background-color: #fff;
     color: #333;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra interna */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo de los botones */
@@ -65,30 +65,30 @@ button.boton-delete {
     background-color: red;
 }
 
-/* Ajustes para dispositivos móviles (pantallas pequeñas) */
+/* Ajustes para dispositivos móviles */
 @media (max-width: 480px) {
-    /* Ajuste de los botones para que no sean demasiado grandes */
+    /* Ajuste para que los botones sean más pequeños en pantallas móviles */
     div button {
-        width: 45px; /* Más pequeño en pantallas pequeñas */
+        width: 45px; /* Ajustamos el tamaño de los botones */
         height: 45px;
         font-size: 14px;
     }
 
-    /* Ajuste de la pantalla de entrada */
+    /* Ajuste de la pantalla de entrada para que sea más visible */
     input#num1 {
         font-size: 20px;
         height: 50px;
-        border: 1px solid #ccc; /* Aseguramos el borde también en móvil */
     }
 
-    /* Ajuste de la disposición de los botones */
+    /* Ajustamos el contenedor */
     .container {
-        width: 90%; /* Se adapta mejor al tamaño del dispositivo */
+        width: 90%;
     }
 
     h1 {
-        font-size: 20px; /* Se ajusta el tamaño del título */
+        font-size: 20px;
     }
 }
+
 
     
