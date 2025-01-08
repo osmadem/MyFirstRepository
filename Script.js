@@ -1,99 +1,97 @@
 
 
-
-//Declarar variables
-var numero = "";
-var numero1 = 0;
-var numero2 = 0;
-var operador = "";
-var resultado = "0";
-
-// Función para agregar números y operadores a la pantalla
-function Numero(valor) {
-    var pantalla = document.getElementById("num1");
-    numero += valor; // Agrega el número 
-    pantalla.value += valor; // Muestra en pantalla 
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: darkgray;
+    margin: 0;
+    padding: 0;
 }
 
-// Función para borrar todo
-function borrar() {
-    numero = "";
-    numero1 = 0;
-    numero2 = 0;
-    operador = "";
-    resultado = "0";
-    document.getElementById("num1").value = ""; // Limpia la pantalla
+h1 {
+    margin-top: 20px;
+    font-size: 24px;
 }
 
-// Función para borrar el último número o carácter
-function deleteLast() {
-    const pantalla = document.getElementById("num1");
-    numero = numero.slice(0, -1); // Elimina el último número o carácter
-    pantalla.value = pantalla.value.slice(0, -1); // Muestra el cambio en pantalla
+.container {
+    margin: 20px auto;
+    width: 260px;
+    background: #222; 
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    border: 1px solid black; 
 }
 
-// Función para sumar
-function sumar() {
-    numero1 = parseFloat(numero); // Guarda el primer número
-    operador = "+";
-    numero = ""; // Reinicia la variable de número
-    document.getElementById("num1").value = numero1 + "+"; // Muestra el operador en pantalla
+input#num1 {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none; 
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
-// Función para restar
-function restar() {
-    numero1 = parseFloat(numero); // Guarda el primer número
-    operador = "-";
-    numero = ""; // Reinicia la variable de número
-    document.getElementById("num1").value = numero1 + "-"; // Muestra el operador en pantalla
+
+div button {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    color: black;
+    cursor: pointer;
 }
 
-// Función para multiplicar
-function multiplicar() {
-    numero1 = parseFloat(numero); // Guarda el primer número
-    operador = "*";
-    numero = ""; // Reinicia la variable de número
-    document.getElementById("num1").value = numero1 + "*"; // Muestra el operador en pantalla
-}
-
-// Función para dividir
-function dividir() {
-    numero1 = parseFloat(numero); // Guarda el primer número
-    operador = "/";
-    numero = ""; // Reinicia la variable de número
-    document.getElementById("num1").value = numero1 + "/"; // Muestra el operador en pantalla
-}
-
-// Función para realizar las operaciones
-function resultadoFinal() {
-    numero2 = parseFloat(numero); // Guarda el segundo número
-    var pantalla = document.getElementById("num1");
-
-    if (isNaN(numero1) || isNaN(numero2)) {
-        pantalla.value = "Error";
-        return;
+    div button:hover {
+        background-color: red;
     }
 
-    switch (operador) {
-        case "+":
-            resultado = numero1 + numero2;
-            break;
-        case "-":
-            resultado = numero1 - numero2;
-            break;
-        case "*":
-            resultado = numero1 * numero2;
-            break;
-        case "/":
-            resultado = numero2 !== 0 ? numero1 / numero2 : "Error";
-            break;
-        default:
-            resultado = "Error";
+    div button:active {
+        background-color: peru;
     }
 
-    pantalla.value = resultado; // Muestra el resultado en pantalla
-    numero = resultado.toString(); // Reinicia con el resultado
-    numero1 = 0;
-    operador = "";
+button[onclick="borrar()"] {
+    background-color: green;
+}
+
+button[onclick="resultadoFinal()"] {
+    background-color: yellow;
+    color: white;
+}
+
+button.boton-delete {
+    background-color: red;
+}
+
+
+@media (max-width: 480px) {
+   
+    div button {
+        width: 45px; 
+        height: 45px;
+        font-size: 14px;
+    }
+
+    input#num1 {
+        font-size: 20px;
+        height: 50px;
+    }
+
+
+    .container {
+        width: 90%; 
+    }
+
+    h1 {
+        font-size: 20px;
+    }
 }
 
