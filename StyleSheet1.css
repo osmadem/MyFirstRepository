@@ -13,7 +13,7 @@ h1 {
 
 .container {
     margin: 40px auto;
-    max-width: 320px; /* Se ajusta para ser flexible */
+    max-width: 320px; 
     width: 100%;
     background: #222;
     padding: 20px;
@@ -22,7 +22,7 @@ h1 {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* Alinea los elementos al contenedor */
+    align-items: stretch; 
 }
 
 .input-container {
@@ -53,7 +53,7 @@ input#num1 {
 div button {
     width: 70px;
     height: 70px;
-    font-size: 18px;
+    font-size: 30px;
     border: none;
     border-radius: 5px;
     background-color: dodgerblue;
@@ -82,10 +82,10 @@ button.boton-delete {
     background-color: red;
 }
 
-/* Media Query para pantallas pequeñas */
+
 @media (max-width: 480px) {
     .container {
-        width: 90%; /* Ajusta al 90% del tamaño disponible en pantallas pequeñas */
+        width: 90%; 
         padding: 10px;
     }
 
@@ -95,7 +95,7 @@ button.boton-delete {
     }
 
     div button {
-        width: 60px;  /* Ajusta el tamaño de los botones */
+        width: 60px;  
         height: 60px;
         font-size: 16px;
     }
@@ -106,7 +106,7 @@ button.boton-delete {
 
     .buttons {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Los botones se distribuirán en 4 columnas */
+        grid-template-columns: repeat(4, 1fr); 
         gap: 5px;
     }
 }
