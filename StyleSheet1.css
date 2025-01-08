@@ -24,7 +24,7 @@ input#num1 {
     text-align: right;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #000; /* Borde negro para la pantalla */
+    border: 1px solid #ccc; /* Añadimos el borde visible */
     border-radius: 5px;
     background-color: #fff;
     color: #333;
@@ -78,7 +78,7 @@ button.boton-delete {
     input#num1 {
         font-size: 20px;
         height: 50px;
-        border: 1px solid #000; /* Aseguramos el borde negro también en móvil */
+        border: 1px solid #ccc; /* Aseguramos el borde también en móvil */
     }
 
     /* Ajuste de la disposición de los botones */
@@ -90,3 +90,5 @@ button.boton-delete {
         font-size: 20px; /* Se ajusta el tamaño del título */
     }
 }
+
+    
