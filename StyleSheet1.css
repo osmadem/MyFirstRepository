@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -12,13 +13,18 @@ h1 {
 }
 
 .container {
-    margin: 20px auto;
-    width: 260px;
+    margin: 40px auto;
+    width: 280px;  
+    max-width: 100%; 
     background: #222;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border: 1px solid black;
+}
+
+.input-container {
+    margin-bottom: 5px;
 }
 
 input#num1 {
@@ -27,21 +33,30 @@ input#num1 {
     font-size: 24px;
     text-align: right;
     padding: 10px;
-    margin-bottom: 15px;
     border: none;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: lightgray;
     color: #333;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+}
+
 div button {
-    width: 60px;
+    width: 67px;
     height: 60px;
-    margin: 5px;
     font-size: 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: dodgerblue;
     color: black;
     cursor: pointer;
@@ -68,19 +83,20 @@ button.boton-delete {
     background-color: red;
 }
 
+
 @media (max-width: 480px) {
     .container {
-        width: 90%; 
+        width: 90%;
         padding: 10px;
     }
 
     input#num1 {
-        font-size: 20px; 
-        height: 50px; 
+        font-size: 20px;
+        height: 50px;
     }
 
     div button {
-        width: 50px; 
+        width: 50px;
         height: 50px;
         font-size: 16px;
     }
@@ -92,10 +108,18 @@ button.boton-delete {
     .buttons {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 5px;
+        gap: 3px;
     }
 }
 
-   
 
-        
+.button-row:last-child {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.button-row:last-child button {
+    width: 48%;
+    font-size: 20px;
+}
