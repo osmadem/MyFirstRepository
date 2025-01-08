@@ -1,1 +1,63 @@
+﻿
 
+
+<html>
+<head>
+    
+    <title>Calculadora V.1</title>
+    <script src="Script.js"></script>
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+ 
+    <h1>My first calculator</h1>
+
+
+    <div class="container">
+        <input id="num1" type="text" placeholder="0" disabled />
+    </div>
+
+    <div>
+        <button onclick="Numero('1')">1</button>
+        <button onclick="Numero('2')">2</button>
+        <button onclick="Numero('3')">3</button>
+        <button onclick="sumar()">+</button>
+
+    </div>
+
+
+    <div>
+        <button onclick="Numero('4')">4</button>
+        <button onclick="Numero('5')">5</button>
+        <button onclick="Numero('6')">6</button>
+        <button onclick="restar()">−</button>
+    </div>
+
+    <div>
+        <button onclick="Numero('7')">7</button>
+        <button onclick="Numero('8')">8</button>
+        <button onclick="Numero('9')">9</button>
+        <button onclick="multiplicar()">×</button>
+
+    </div>
+
+    <div>
+        <button onclick="Numero('0')">0</button>
+        <button onclick="Numero('.')">.</button>
+        <button onclick="borrar()">C</button>
+        <button onclick="dividir()">÷</button>
+    </div>
+
+
+    <div>
+        <button onclick="resultadoFinal()">=</button>
+        <button class="boton-delete" onclick="deleteLast()"><i class="fa-solid fa-delete-left"></i></button>
+    </div>
+
+
+</body>
+
+
+</html>
