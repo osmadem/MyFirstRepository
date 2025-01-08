@@ -13,7 +13,7 @@ h1 {
 
 .container {
     margin: 20px auto;
-    width: 260px; 
+    width: 260px;
     background: #222;
     padding: 15px;
     border-radius: 10px;
@@ -47,13 +47,13 @@ div button {
     cursor: pointer;
 }
 
-    div button:hover {
-        background-color: red;
-    }
+div button:hover {
+    background-color: red;
+}
 
-    div button:active {
-        background-color: peru;
-    }
+div button:active {
+    background-color: peru;
+}
 
 button[onclick="borrar()"] {
     background-color: green;
@@ -67,7 +67,6 @@ button[onclick="resultadoFinal()"] {
 button.boton-delete {
     background-color: red;
 }
-
 
 @media (max-width: 480px) {
     .container {
@@ -89,6 +88,14 @@ button.boton-delete {
     h1 {
         font-size: 20px;
     }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
 }
 
+   
 
+        
